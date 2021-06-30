@@ -1,3 +1,5 @@
+**UPDATE**: This script is not necessary in kernel versions >=5.14, as a quirks fix has been merged into recent kernel versions. See [this issue](https://github.com/AdamGleave/elgato-camlink-workaround/issues/3) for details.
+
 The [Elgato Cam Link 4K](https://www.elgato.com/en/gaming/cam-link-4k) is a USB device to capture HDMI video, intended for use with mirrorless or DSLR cameras that can output clean HDMI.
 
 It appears as a USB Video Class (UVC) device, and so is natively supported under Linux. Unfortunately, as [Mike Walters](https://assortedhackery.com/patching-cam-link-to-play-nicer-on-linux/) clearly documented, there is a bug in the firmware causing it to declare it supports video formats that it in fact does not. This causes most (but not all) apps on Linux to fail to open it as a webcam.
